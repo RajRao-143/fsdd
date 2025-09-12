@@ -1,0 +1,254 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>TCS CodeVita — Contest Portal</title>
+  <meta name="description" content="TCS CodeVita — practice problems, register, and compete in coding challenges.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --accent:#06b6d4; --muted:#94a3b8; --glass: rgba(255,255,255,0.03);
+      --max-width:1100px;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0; min-height:100vh; background:linear-gradient(180deg,var(--bg),#071024 80%); color:#e6eef6; -webkit-font-smoothing:antialiased}
+    .wrap{max-width:var(--max-width); margin:40px auto; padding:24px}header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:52px;height:52px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#8b5cf6);display:grid;place-items:center;font-weight:700}
+.brand h1{margin:0;font-size:18px}
+nav{display:flex;gap:12px}
+nav a{color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:8px;font-weight:600}
+nav a.primary{background:var(--glass);color:#fff}
+
+.hero{display:grid;grid-template-columns:1fr 380px;gap:28px;align-items:center;margin-top:28px}
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:22px;border-radius:14px;box-shadow:0 6px 20px rgba(2,6,23,0.6);}
+.hero h2{margin:0 0 12px 0;font-size:28px}
+.hero p{color:var(--muted);margin:0 0 18px}
+.cta-row{display:flex;gap:12px}
+.btn{display:inline-block;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700}
+.btn.primary{background:var(--accent);color:#042029}
+.btn.ghost{border:1px solid rgba(255,255,255,0.06);color:var(--muted);background:transparent}
+
+.sidebar .stats{display:flex;gap:12px;flex-direction:column}
+.stat{background:rgba(255,255,255,0.02);padding:12px;border-radius:10px;text-align:center}
+.stat h3{margin:0;font-size:18px}
+.stat p{margin:6px 0 0;color:var(--muted);font-size:13px}
+
+.sections{display:grid;grid-template-columns:1fr 380px;gap:28px;margin-top:22px}
+.problems-list{display:grid;gap:12px}
+.problem{display:flex;justify-content:space-between;align-items:center;padding:14px;border-radius:10px;background:rgba(255,255,255,0.01)}
+.tags{display:flex;gap:8px}
+.tag{padding:6px 8px;border-radius:6px;background:rgba(255,255,255,0.02);font-size:13px;color:var(--muted)}
+
+footer{margin-top:36px;color:var(--muted);display:flex;justify-content:space-between;align-items:center;gap:12px}
+
+/* responsive */
+@media(max-width:920px){
+  .hero,.sections{grid-template-columns:1fr}
+  .sidebar{order:2}
+}
+@media(max-width:520px){
+  .wrap{padding:16px;margin:20px}
+  .logo{width:44px;height:44px}
+  .hero h2{font-size:22px}
+}
+
+/* little animations */
+.pulse{animation:pulse 3s infinite}
+@keyframes pulse{0%{transform:translateY(0)}50%{transform:translateY(-4px)}100%{transform:translateY(0)}}
+
+/* form styles */
+form input, form textarea, form select{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit;margin-top:8px}
+.muted{color:var(--muted);font-size:13px}
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">CV</div>
+        <div>
+          <h1>TCS CodeVita</h1>
+          <div class="muted">Global coding contest • Practice • Learn</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#problems">Problems</a>
+        <a href="#about">About</a>
+        <a href="#faq">FAQ</a>
+        <a href="#register" class="primary">Register</a>
+      </nav>
+    </header><main>
+  <section class="hero">
+    <div class="card">
+      <h2>Compete. Learn. Grow.</h2>
+      <p>Join CodeVita-style challenges, solve curated problems across difficulty levels and improve your algorithmic skills. Participate individually or as a team.</p>
+
+      <div class="cta-row">
+        <a class="btn primary" href="#register">Register Now</a>
+        <a class="btn ghost" href="#problems">View Problems</a>
+      </div>
+
+      <div style="margin-top:18px;display:flex;gap:12px">
+        <div class="tag">Beginner</div>
+        <div class="tag">Data Structures</div>
+        <div class="tag">Algorithms</div>
+      </div>
+
+      <div style="margin-top:18px;display:flex;gap:10px;align-items:center">
+        <div class="muted">Upcoming round:</div>
+        <div style="font-weight:700">September 28, 2025</div>
+      </div>
+    </div>
+
+    <aside class="sidebar">
+      <div class="card stats">
+        <div class="stat">
+          <h3>1,250+</h3>
+          <p>Registered Participants</p>
+        </div>
+        <div class="stat">
+          <h3>200+</h3>
+          <p>Problems Solved (this month)</p>
+        </div>
+        <div class="stat pulse">
+          <h3>Top Rank: 1</h3>
+          <p>Leaderboard</p>
+        </div>
+      </div>
+    </aside>
+  </section>
+
+  <section class="sections">
+    <div>
+      <div id="problems" class="card">
+        <h3 style="margin-top:0">Featured Problems</h3>
+        <div class="problems-list">
+          <div class="problem">
+            <div>
+              <div style="font-weight:700">1. Balanced Brackets</div>
+              <div class="muted">Difficulty: Easy • 1.5 pts</div>
+            </div>
+            <div class="tags">
+              <div class="tag">Stack</div>
+              <div class="tag">String</div>
+            </div>
+          </div>
+
+          <div class="problem">
+            <div>
+              <div style="font-weight:700">2. Max Subarray with K</div>
+              <div class="muted">Difficulty: Medium • 3 pts</div>
+            </div>
+            <div class="tags">
+              <div class="tag">Sliding Window</div>
+            </div>
+          </div>
+
+          <div class="problem">
+            <div>
+              <div style="font-weight:700">3. Shortest Path in Grid</div>
+              <div class="muted">Difficulty: Hard • 5 pts</div>
+            </div>
+            <div class="tags">
+              <div class="tag">BFS</div>
+              <div class="tag">Graphs</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:16px;display:flex;gap:10px">
+          <a href="#" class="btn primary">Start Practice</a>
+          <a href="#" class="btn ghost">Full Archive</a>
+        </div>
+      </div>
+
+      <div id="about" class="card" style="margin-top:14px">
+        <h3 style="margin-top:0">About CodeVita</h3>
+        <p class="muted">CodeVita is an international coding competition that encourages students and professionals to sharpen their problem solving and programming skills. This demo page recreates a contest portal: register, browse problems, submit solutions, and track your leaderboard standing.</p>
+      </div>
+
+      <div id="faq" class="card" style="margin-top:14px">
+        <h3 style="margin-top:0">FAQ</h3>
+        <details>
+          <summary>How do I submit a solution?</summary>
+          <p class="muted">Write your solution in any supported language, compile and submit through the submission form. This demo does not include an online judge backend.</p>
+        </details>
+        <details style="margin-top:8px">
+          <summary>What languages are supported?</summary>
+          <p class="muted">Common contest languages: C/C++, Java, Python, JavaScript, C#.</p>
+        </details>
+      </div>
+    </div>
+
+    <aside>
+      <div id="register" class="card">
+        <h3 style="margin-top:0">Register</h3>
+        <form id="regForm" onsubmit="return handleRegister(event)">
+          <label for="name">Full name</label>
+          <input id="name" required placeholder="e.g. Priya Kumar">
+
+          <label for="email">Email</label>
+          <input id="email" type="email" required placeholder="you@example.com">
+
+          <label for="college">College / Company</label>
+          <input id="college" placeholder="Institute or company name">
+
+          <label for="language">Preferred language</label>
+          <select id="language">
+            <option>Choose a language</option>
+            <option>Python</option>
+            <option>C++</option>
+            <option>Java</option>
+            <option>JavaScript</option>
+          </select>
+
+          <div style="margin-top:10px;display:flex;gap:10px">
+            <button class="btn primary" type="submit">Submit</button>
+            <button class="btn ghost" type="button" onclick="document.getElementById('regForm').reset()">Reset</button>
+          </div>
+          <div id="regMessage" class="muted" style="margin-top:10px"></div>
+        </form>
+      </div>
+
+      <div class="card" style="margin-top:12px">
+        <h4 style="margin:0">Contact</h4>
+        <div class="muted" style="margin-top:8px">Email: support@codevita-demo.local</div>
+        <div class="muted">Discord: /codevita</div>
+      </div>
+    </aside>
+  </section>
+
+</main>
+
+<footer>
+  <div>© 2025 CodeVita Demo</div>
+  <div class="muted">Built for practice — no official affiliation with TCS</div>
+</footer>
+
+  </div>  <script>
+    function handleRegister(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const college = document.getElementById('college').value.trim();
+      const lang = document.getElementById('language').value;
+      const msg = document.getElementById('regMessage');
+      if(!name || !email) { msg.textContent = 'Please fill name and email.'; return false; }
+      // Demo behaviour: show success message and "save" to localStorage
+      const signup = {name,email,college,lang,ts: new Date().toISOString()};
+      const store = JSON.parse(localStorage.getItem('cv_reg')||'[]');
+      store.push(signup); localStorage.setItem('cv_reg', JSON.stringify(store));
+      msg.textContent = 'Thanks — you are registered (demo). Check localStorage for saved data.';
+      msg.style.color = '#a7f3d0';
+      document.getElementById('regForm').reset();
+      return false;
+    }
+  </script></body>
+</html>
